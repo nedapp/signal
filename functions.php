@@ -556,3 +556,24 @@ function new_excerpt_more( $more ) {
     return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(
+            array(
+                'label' => 'Velika slika za vest',
+                'id' => 'secondary-image',
+                'post_type' => 'post'
+            )
+    	);
+}
+
+add_filter('the_content', 'my_addlightboxrel');
+function my_addlightboxrel($content) {
+       global $post;
+       $pattern ="/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+       $replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
+       $content = preg_replace($pattern, $replacement, $content);
+       return $content;
+}
+
+add_image_size( 'single-page-thumb', 308, 266, true );
