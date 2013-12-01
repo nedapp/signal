@@ -12,6 +12,11 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 			<div class="single-leading-image">
 				<?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image', NULL, 'full'); endif; ?>
+				<div class="current-post-title single-uppercase"> 
+					<span class="single-bold"><?php the_title(); ?></span>
+					<br/>
+					<?php echo get_post_meta( $wp_query->post->ID, 'signal_teaser')[0]; ?>
+				</div>
 			</div>
 			<div class="single-intro">
 				<div class="margin-left100 height100 float-left">
@@ -24,7 +29,6 @@ get_header(); ?>
 						<?php the_excerpt() ?>
 					</div>
 				</div>
-				
 			</div>
 
 			<div class="single-content">
@@ -43,11 +47,11 @@ get_header(); ?>
 
 						foreach( $recent_posts  as $post ) : setup_postdata($post); 
 					?>	
-					<div class="recent-post-single float-left">
+					<div class="recent-post-single float-left padding-right20">
 						<div class="post-image position-relative">
 							<?php echo get_the_post_thumbnail($post["ID"], 'single-page-thumb'); ?>
 							<div class="single-post-title text-aligning">
-								<?php echo $post['post_title'];  ?>
+								<a href="<?php echo get_permalink($post["ID"]) ?>"><?php echo $post['post_title'];  ?></a>
 							</div>	
 						</div>
 					</div>
