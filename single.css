@@ -155,6 +155,7 @@
 	background-image: url(images_design/top_news/back-pattern.png);
 	position: relative;
 	z-index: 1;
+    top: 100px;
 }
 
 .single-intro:after {

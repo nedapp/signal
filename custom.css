@@ -9,32 +9,41 @@ html, body {
 
 /* custom css */
 .hfeed.site {
-    max-width: 100% !important;
+    max-width: 100%;
     height: 100%;
 }
 
 .site-header {
-    background-color: #ed145a;
-    background-image: none;
-    height: 12%;
+    background: none;
+}
+
+.tabler {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tabler > div {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .signal-navbar {
-    background-color: #ed145a;
-    background-image: none;
-    height: 100%;
+    background: #ed145a;
     width: 100%;
 }
 
-.signal-nav-stream {
-    width: 31%;
-    float: left;
+.signal-nav {
+    vertical-align: middle;
+    height: 100px;
+}
+
+.signal-nav.stream {
+    width: 450px;
 }
 
 .current-artist-player {
-    float: left;
-    height: 21.5%;
-    width: 21.5%;
+    width: 100px;
 }
 
 .current-artist-img {
@@ -105,34 +114,10 @@ html, body {
 }
 
 .signal-page {
-    float: left;
     color: white;
     font-weight: bold;
-    font-size: 30pt;
+    font-size: 30px;
     text-align: center;
-    height: 100%;
-    padding-top: 3%;
-}
-
-.signal-page.home {
-    width: 15%;
-    background-color: #00b1b3;
-}
-
-.signal-page.live {
-    width: 25%;
-}
-
-.signal-page.on-air {
-    width: 15%;
-}
-
-.signal-page.social {
-    width: 20%;
-}
-
-.signal-page.contact {
-    width: 25%;
 }
 
 .signal-page:hover {
@@ -144,7 +129,6 @@ html, body {
     float: left;
     height: 100%;
     text-align: center;
-    padding-top: 12%;
     width: 33%;
 }
 
@@ -153,10 +137,8 @@ html, body {
     cursor: pointer;
 }
 
-.signal-nav-social {
-    width: 15%;
-    height: 100%;
-    float: left;
+.signal-nav.social {
+    width: 240px;
 }
 
 .signal-stream-popups {
@@ -244,6 +226,7 @@ html, body {
 
 .on-air-icon-img {
     width: 30%;
+    /*height: 100%;*/
 }
 
 .signal-host-name {
