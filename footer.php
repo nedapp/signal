@@ -9,16 +9,40 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
+		<footer>
+			<div class="footer-intro">
 
-<!--		</div><!-- #main -->
-<!--		<footer id="colophon" class="site-footer" role="contentinfo">-->
-<!--			--><?php //get_sidebar( 'main' ); ?>
-<!---->
-<!--			<div class="site-info">-->
-<!--				--><?php //do_action( 'twentythirteen_credits' ); ?>
-<!--				<a href="--><?php //echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?><!--" title="--><?php //esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?><!--">--><?php //printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?><!--</a>-->
-<!--			</div><!-- .site-info -->
-<!--		</footer><!-- #colophon -->
+			</div>
+			<div class="footer-content">
+				<div class="footer-content-column">
+					<div class="footer-logo">
+					</div>
+					<div class="footer-facebook-stream">
+					</div>
+					<div class="footer-twitter-stream">
+					</div>
+				</div>
+
+				<div class="footer-content-column">
+					
+				</div>
+
+				<div class="footer-content-column">
+					<div class="footer-social">
+					</div>
+					<div class="footer-telephone">
+						<div class="telephone-label"></div>
+						<div class="telephone-number"></div>
+					</div>
+					<div class="footer-address">
+						<div class="address-label"></div>
+						<div class="address-value"></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright"> </div>
+		</footer>
+
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>

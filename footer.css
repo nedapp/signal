@@ -1,0 +1,33 @@
+.footer-intro {
+	background-image: url(images_design/top_news/back-pattern.png);
+	height: 125px;
+	position: relative;
+	z-index: 1;
+}
+
+.footer-intro:after {
+	content: '';
+	background-color: #00b1b3;
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.85;
+    z-index: -1;
+}
+
+.footer-content {
+	height: 450px;
+	width: 100%;
+	background-color: #00b1b3; 
+}
+
+.footer-content-column {
+	width: 33%;
+}
+
+.footer-copyright {
+	height: 125px;
+	background-color: #000000;
+}
