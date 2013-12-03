@@ -15,7 +15,7 @@ get_header(); ?>
 				<div class="current-post-title single-uppercase"> 
 					<span class="single-bold"><?php the_title(); ?></span>
 					<br/>
-					<?php echo get_post_meta( $wp_query->post->ID, 'signal_teaser')[0]; ?>
+					<?php $teaser = get_post_meta( $wp_query->post->ID, 'signal_teaser'); echo $teaser[0]; ?>
 				</div>
 			</div>
 			<div class="single-intro">

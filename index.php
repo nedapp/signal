@@ -108,7 +108,7 @@ get_header(); ?>
                         ?>
                     </div>
                     <span class="news-title"><?php the_title(); ?></span>
-                    <span class="news-subtitle"><?php the_title(); ?>???</span>
+                    <span class="news-subtitle"><?php the_title(); ?></span>
                     <!--<div class="clearfix"></div>-->
                 </div>
             <?php endwhile; ?>
@@ -162,42 +162,41 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="signal-posts-listing">
-            <?php
-            wp_reset_postdata();
-            global $post;
-            $args = array( 'numberposts' => '4' );
-            $recent_posts = wp_get_recent_posts( $args );
-            $i = 0;
-            foreach( $recent_posts  as $post ) : setup_postdata($post); ?>
-                <div class="<?php echo get_post_meta( $post["ID"], 'oblik_clanka')[0] ?>" >
-                    <div class="<?php echo get_post_meta( $post["ID"], 'oblik_clanka')[0] ?>-image">
-                        <?php echo get_the_post_thumbnail($post["ID"], 'full'); ?>
-                    </div>
-                    <div class="<?php echo get_post_meta( $post["ID"], 'oblik_clanka')[0] ?>-title">
-                        <?php if (get_post_meta( $post["ID"], 'oblik_clanka')[0] == 'vertikalni-pravougaonik'){?>
-                        <div class="margintop">
-                            <?php } ?>
-                            <?php echo  $post['post_title']; ?>
-                            <div class="<?php echo get_post_meta( $post["ID"], 'oblik_clanka')[0] ?>-excerpt">
-                                <?php echo  $post['post_excerpt']; ?>
-                            </div>
-                            <?php if (get_post_meta( $post["ID"], 'oblik_clanka')[0] == 'vertikalni-pravougaonik'){ ?>
-                        </div>
-                    <?php } ?>
-                    </div>
+    <div class="signal-posts-listing">
+        <?php
+        wp_reset_postdata();
+        global $post;
+        $args = array( 'numberposts' => '4' );
+        $recent_posts = wp_get_recent_posts( $args );
+        $i = 0;
+        foreach( $recent_posts as $post ) : setup_postdata($post); ?>
+            <?php $shape = get_post_meta( $post["ID"], 'oblik_clanka'); ?>
+            <div class="<?php echo $shape[0] ?>" >
+                <div class="<?php $shape[0] ?>-image">
+                    <?php echo get_the_post_thumbnail($post["ID"], 'full'); ?>
                 </div>
-                <?php
-                $i++;
-                if ($i == 2) {
-                    ?>
-                    <div class="clearfix"></div>
+                <div class="<?php echo $shape[0] ?>-title">
+                    <?php if ($shape[0] == 'vertikalni-pravougaonik'){?>
+                    <div class="margintop">
+                        <?php } ?>
+                        <?php echo $post['post_title']; ?>
+                        <div class="<?php echo $shape[0] ?>-excerpt">
+                            <?php echo $post['post_excerpt']; ?>
+                        </div>
+                        <?php if ($shape[0] == 'vertikalni-pravougaonik'){ ?>
+                    </div>
                 <?php } ?>
-            <?php endforeach; wp_reset_postdata(); ?>
+                </div>
+            </div>
+            <?php
+            $i++;
+            if ($i == 2) {
+                ?>
+                <div class="clearfix"></div>
+            <?php } ?>
+        <?php endforeach; wp_reset_postdata(); ?>
 
-            <!--                    </div>-->
-        </div>
-
+        <!-- </div>-->
     </div>
 
     <!--<div style="height: 130%;"></div>-->

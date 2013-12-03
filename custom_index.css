@@ -38,6 +38,11 @@ a:focus {
     bottom: 0;
 }
 
+menu, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
 /* SITE ***************************************************************************************************************/
 
 
@@ -391,7 +396,7 @@ a:focus {
 
 .top-news-single span {
     position: absolute;
-    left: 20px;
+    padding: 0 20px;
 }
 
 .top-news-single .news-title {
@@ -422,12 +427,18 @@ a:focus {
 
 .top-news-preview {
     background-color: #ffffff;
-    padding: 30px;
+    border: 30px solid transparent;
     display: none;
+    overflow: hidden;
 }
 
 .top-news-preview.active {
     display: block;
+}
+
+.top-news-preview-second {
+    height: 100%;
+    overflow: hidden;
 }
 
 .news-leading {
@@ -441,6 +452,10 @@ a:focus {
 
 .news-leading span {
     font-size: 26px;
+}
+
+.news-leading a {
+    color: #ED145A;
 }
 
 .news-leading .news-info {
@@ -466,6 +481,10 @@ a:focus {
 .news-text a {
     color: #ed145a;
     text-decoration: underline;
+}
+
+.news-text img {
+    display: none;
 }
 
 /* HOME STREAM TEMP ***************************************************************************************************/

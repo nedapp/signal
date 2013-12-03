@@ -127,6 +127,7 @@
 .single-leading-image {
 	z-index: 1;
 	position: relative;
+    padding-top: 100px;
 }
 
 .single-leading-image:after {
@@ -155,7 +156,6 @@
 	background-image: url(images_design/top_news/back-pattern.png);
 	position: relative;
 	z-index: 1;
-    top: 100px;
 }
 
 .single-intro:after {
