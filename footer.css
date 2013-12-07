@@ -4,7 +4,7 @@
 
 .footer-intro {
 	background-image: url(images_design/top_news/back-pattern.png);
-	height: 125px;
+	height: 90px;
 	position: relative;
 	z-index: 1;
 }
@@ -22,7 +22,7 @@
 }
 
 .footer-content {
-	height: 550px;
+	height: 340px;
 	width: 100%;
 	background-color: #00b1b3; 
 }
@@ -35,36 +35,36 @@
 .footer-logo {
 	background-image: url('images_design/footer/logo-footer.png');
 	background-repeat: no-repeat;
-	background-position: 0 100px;
-	height: 220px;
-	margin-left: 150px;
+	background-position: 0 62px;
+	height: 140px;
+	margin-left: 95px;
 }
 
 .footer-facebook-stream {
 	background-image: url('images_design/footer/facebook.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 }
 
 .latest-facebook-stream {
-	margin-top: 25px;
-	margin-left: 155px;	
+	margin-top: 20px;
+	margin-left: 95px;	
 }
 
 .footer-facebook-stream:hover {
 	background-image: url('images_design/footer/facebook-hover.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 	/*margin-left: 155px;	*/
 }
 
 
 .facebook-status {
 	margin-top: 10px;
-	margin-left: 155px;	
-	margin-bottom: 30px;
+	margin-left: 95px;	
+	margin-bottom: 20px;
 	color: white;
 	font-size: 22px;
 	line-height: 20px;
@@ -73,30 +73,31 @@
 .footer-twitter-stream {
 	background-image: url('images_design/footer/twitter.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 	/*margin-left: 155px;	*/
 }
 
 .footer-twitter-stream:hover {
 	background-image: url('images_design/footer/twitter-hover.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 	/*margin-left: 155px;	*/
 }
 
 .twitter-tweet {
 	margin-top: 10px;
-	margin-left: 155px;	
+	margin-left: 95px;	
 	color: white;
 	font-size: 22px;
 	line-height: 20px;
 }
 
 .footer-menu-class {
-	margin-top: 250px;
-	margin-left: 205px;
+	margin-top: 170px;
+	text-align: left;
+	margin-left: 40%;
 }
 
 .footer-menu-class li{
@@ -105,11 +106,11 @@
 
 .footer-menu-class li a {
 	color: white;
-	font-size: 40px;
-	line-height: 40px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-top: 150px;
+	margin-top: 160px;
 }
 
 .footer-menu-class li a:hover {
@@ -118,30 +119,30 @@
 }
 
 .footer-social {
-	margin-top: 250px;
+	margin-top: 170px;
 	margin-left: 50px;
 }
 
 .footer-mail {
 	background-image: url('images_design/footer/mail.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 }
 
 .footer-mail:hover {
 	background-image: url('images_design/footer/mail-hover.png');
 	background-repeat: no-repeat;
-	height: 50px;
-	width: 50px;
+	height: 36px;
+	width: 35px;
 }
 
 .footer-telephone {
 	margin-left: 80px;
-	margin-top: 25px;
+	margin-top: 10px;
 	color: white;
-	font-size: 25px;
-	line-height: 25px;
+	font-size: 15px;
+	line-height: 15px;
 }
 
 .margin-left30 {
@@ -153,12 +154,12 @@
 }
 
 .footer-copyright {
-	height: 125px;
+	height: 95px;
 	background-color: #000000;
 }
 
 .disclaimer {
-	line-height: 125px;
+	line-height: 95px;
 	margin: 0 auto;
 	color: #00b1b3;
 	font-size: 25px;

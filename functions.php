@@ -577,4 +577,4 @@ function my_addlightboxrel($content) {
        return $content;
 }
 
-add_image_size( 'single-page-thumb', 308, 266, true );
+add_image_size( 'single-page-thumb', 240, false );
