@@ -2,6 +2,12 @@
 	clear: both;
 }
 
+.center-content {
+    margin: 0 auto;
+    width: 1120px;
+    display: table;
+}
+
 .footer-intro {
 	background-image: url(images_design/top_news/back-pattern.png);
 	height: 90px;
@@ -24,20 +30,27 @@
 .footer-content {
 	height: 340px;
 	width: 100%;
-	background-color: #00b1b3; 
+	background-color: #00b1b3;
 }
 
 .footer-content-column {
-	width: 33%;
-	float: left;
+	width: 360px;
+    height: 340px;
+    margin-right: 20px;
+    padding: 0 20px 35px;
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.footer-content-column:last-child {
+    margin-right: 0;
 }
 
 .footer-logo {
 	background-image: url('images_design/footer/logo-footer.png');
 	background-repeat: no-repeat;
-	background-position: 0 62px;
-	height: 140px;
-	margin-left: 95px;
+	height: 80px;
 }
 
 .footer-facebook-stream {
@@ -49,7 +62,6 @@
 
 .latest-facebook-stream {
 	margin-top: 20px;
-	margin-left: 95px;	
 }
 
 .footer-facebook-stream:hover {
@@ -63,7 +75,6 @@
 
 .facebook-status {
 	margin-top: 10px;
-	margin-left: 95px;	
 	margin-bottom: 20px;
 	color: white;
 	font-size: 22px;
@@ -88,16 +99,13 @@
 
 .twitter-tweet {
 	margin-top: 10px;
-	margin-left: 95px;	
 	color: white;
 	font-size: 22px;
 	line-height: 20px;
 }
 
 .footer-menu-class {
-	margin-top: 170px;
 	text-align: left;
-	margin-left: 40%;
 }
 
 .footer-menu-class li{
@@ -119,8 +127,6 @@
 }
 
 .footer-social {
-	margin-top: 170px;
-	margin-left: 50px;
 }
 
 .footer-mail {
@@ -138,7 +144,6 @@
 }
 
 .footer-telephone {
-	margin-left: 80px;
 	margin-top: 10px;
 	color: white;
 	font-size: 15px;

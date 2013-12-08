@@ -17,6 +17,7 @@ get_header(); ?>
 					<br/>
 					<?php $teaser = get_post_meta( $wp_query->post->ID, 'signal_teaser'); echo $teaser[0]; ?>
 				</div>
+				<?php get_header("search"); ?>
 			</div>
 			<div class="single-intro">
 				<div class="single-intro-title float-left">
@@ -48,7 +49,7 @@ get_header(); ?>
 						foreach( $recent_posts  as $post ) : setup_postdata($post); 
 					?>	
 					<div class="recent-post-single float-left">
-						<div class="post-image position-relative">
+						<div class="post-image">
 							<?php echo get_the_post_thumbnail($post["ID"], 'single-page-thumb'); ?>
 							<div class="single-post-title text-aligning">
 								<a href="<?php echo get_permalink($post["ID"]) ?>"><?php echo $post['post_title'];  ?></a>

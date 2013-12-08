@@ -111,6 +111,7 @@
 	margin-left: 300px;
 	background-color: white;
 	font-size: 15px;
+    color: #777777;
 }
 
 .recent-posts {
@@ -127,15 +128,27 @@
 	padding-right: 20px;
 }
 
+.post-image {
+    position: relative;
+}
+
 .single-post-title {
 	position: absolute;
 	background-color: white;
 	bottom: 0;
 	padding: 15px;
 	width: 100%;
-	color: #ed145a;
 	font-size: 20px;
 	line-height: 20px;
+}
+
+.single-post-title a {
+    color: #ed145a;
+}
+
+.single-post-title a:hover,
+.single-post-title a:hover {
+    text-decoration: underline;
 }
 
 .single-content {
