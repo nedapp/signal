@@ -27,50 +27,17 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
+    <?php wp_head(); ?>
+
+    <!-- custom css -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.1.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/signal.js"></script>
-    <?php wp_head(); ?>
-    <!-- custom css -->
- <!--   <link rel="stylesheet" href="<?php /*echo get_template_directory_uri(); */?>/custom.css" type='text/css' media='all'/>-->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom_index.css" type='text/css' media='all'/>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css" type='text/css' media='all'/>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/footer.css" type='text/css' media='all'/>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/novecento.css" type='text/css' media='all'/>
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		<header id="masthead" class="site-header">
-			<div class="signal-navbar tabler">
-                <div class="signal-nav stream">
-                    <div class="current-artist-player">
-                        <img class="current-artist-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/rihanna.jpg"/>
-                    </div>
-                    <div class="signal-audio-player">
-                        <!--<div class="signal-audio-info">
-                            <span class="signal-current-time"><?php /*date_default_timezone_set("Europe/Belgrade"); echo date("H:i"); */?></span>
-                            <div class="signal-audio-player-artist">Rihanna</div>
-                            <div class="signal-audio-player-song"> - Pour it up </div>
-                            <span class="clearfix"></span>
-                            <div class="signal-audio-player-hostname">Vladimir Vucinic</div>
-                            <div class="signal-audio-player-on-air">On air</div>
-                        </div>
-
-                        <div class="signal-timeline">
-                            <img class="signal-timeline-icon" src="<?php /*echo get_template_directory_uri(); */?>/images_design/nav/timeline.png"/>
-                        </div>-->
-                    </div>
-                </div>
-
-                <div class="signal-nav">
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'signal-page-menu signal-menu', 'container_class' => 'signal-menu-container' ) ); ?>
-                </div>
-                <div class="signal-nav social">
-                    <div class="nav-social"><img src="<?php echo get_template_directory_uri(); ?>/images_design/nav/facebook.png"></div>
-                    <div class="nav-social"><img src="<?php echo get_template_directory_uri(); ?>/images_design/nav/twitter.png"></div>
-                    <div class="nav-social"><img src="<?php echo get_template_directory_uri(); ?>/images_design/nav/user.png"></div>
-                </div>
-
-
-
-            </div><!-- #navbar -->
-		</header><!-- #masthead -->
+	<div class="site">
+		<?php get_header("menu"); ?>

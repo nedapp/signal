@@ -18,127 +18,109 @@ get_header(); ?>
 
     <!-- HOME STREAM -------------------------------------------------------------------------------------------------->
 
-    <div class="signal-home-stream stretch">
-        <div class="signal-stream-popups">
-            <div class="signal-logo">
-                <img class="signal-logo-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/logo.png"/>
-            </div>
-            <div class="signal-logo-text">
-                Radio <br> signal
-            </div>
-        </div>
-
-        <div class="signal-icon-popups video">
-            <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/video.png"/>
-        </div>
-
-        <div class="signal-icon-popups audio">
-            <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/audio.png"/>
-        </div>
-
-        <div class="signal-stream-live">
-            <div class="signal-stream-artist">
-                Rihanna
-            </div>
-            <div class="signal-stream-song">
-                Pour it up
-            </div>
-            <div class="signal-stream-on-air">
-                <div class="on-air-icon">
-                    <img class="on-air-icon-img" src="<?php echo get_template_directory_uri(); ?>/images_design/big_image/on-air.png"/>
-                    On Air
+    <div class="page stream">
+        <div class="page-content">
+            <div class="signal-stream-popups">
+                <div class="signal-logo">
+                    <img class="signal-logo-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/logo.png"/>
                 </div>
-                <div class="signal-host-name">
-                    Vladimir Vucinic
-                </div>
-                <div class="signal-show-name">
-                    Jutarnji program
+                <div class="signal-logo-text">
+                    Radio <br> signal
                 </div>
             </div>
-        </div>
 
-        <div class="signal-home-stream-play-btn"></div>
-    </div>
+            <div class="signal-icon-popups video">
+                <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/video.png"/>
+            </div>
 
-    <!-- BOTTOM NAVIGATION -------------------------------------------------------------------------------------------->
+            <div class="signal-icon-popups audio">
+                <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/audio.png"/>
+            </div>
 
-    <div class="signal-bottom-nav">
-        <div class="signal-nav">
-            <ul class="signal-menu">
-                <li><a href="#" class="signal-nav-top-news">Top news</a></li>
-                <li class="nav-social "><a href="#" class="signal-nav-search"><img src="<?php echo get_template_directory_uri(); ?>/images_design/nav/search.png"></a></li>
-            </ul>
-
-        </div>
-        <div class="signal-nav">
-            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'signal-menu', 'container_class' => 'signal-menu-container' ) ); ?>
-        </div>
-        <div class="signal-search">
-            <form role="search" method="get" class="search-form tabler" action="<?php esc_url( home_url( '/' ) )?>">
-                <div class="search-field-wrapper">
-                    <input type="search" class="search-field" placeholder="SEARCH SOMETHING" value="<?php get_search_query();?>" name="s" />
+            <div class="signal-stream-live">
+                <div class="signal-stream-artist">
+                    Rihanna
                 </div>
-                <div class="search-button">
-                    <input type="submit" class="search-submit" value="Search" />
+                <div class="signal-stream-song">
+                    Pour it up
                 </div>
-                <div class="search-button">
-                    <input type="button" class="search-submit search-cancel" value="Cancel" />
+                <div class="signal-stream-on-air">
+                    <div class="on-air-icon">
+                        <img class="on-air-icon-img" src="<?php echo get_template_directory_uri(); ?>/images_design/big_image/on-air.png"/>
+                        On Air
+                    </div>
+                    <div class="signal-host-name">
+                        Vladimir Vucinic
+                    </div>
+                    <div class="signal-show-name">
+                        Jutarnji program
+                    </div>
                 </div>
-            </form>
-        </div>
+            </div>
 
+            <div class="signal-home-stream-play-btn"></div>
+        </div>
+		<?php get_header('search'); ?>
     </div>
 
     <!-- TOP NEWS ----------------------------------------------------------------------------------------------------->
 
-    <div class="signal-top-news stretch">
-        <div class="signal-center-content stretch">
-            <div class="top-news-header">
-                <div class="top-news-title"><img src="<?php echo get_template_directory_uri(); ?>/images_design/top_news/top_news.png">Top news</div>
+    <div class="page news">
+        <div class="page-content">
+            <div class="header">
+                <div class="title"><img src="<?php echo get_template_directory_uri(); ?>/images_design/top_news/top_news.png">Top news</div>
             </div>
             <?php query_posts($query_string."&featured=yes&posts_per_page=3"); ?>
-            <div class="top-news-single-wrapper fill">
+            <div class="post-image-container">
             <?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
-                <div class="top-news-single" data-id='<?php echo get_the_ID();?>'>
-                    <div class="news-image stretch">
+                <div class="post-image" data-id='<?php echo get_the_ID();?>'>
+                    <div class="image">
                         <?php
                         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                             the_post_thumbnail(400, 400);
                         }
                         ?>
                     </div>
-                    <span class="news-title"><?php the_title(); ?></span>
-                    <span class="news-subtitle"><?php the_title(); ?></span>
-                    <!--<div class="clearfix"></div>-->
+                    <div class="image-overlay"></div>
+                    <span class="title"><?php the_title(); ?></span>
+                    <span class="subtitle"><?php the_title(); ?></span>
                 </div>
             <?php endwhile; ?>
             <?php endif; ?>
             </div>
-            <?php /*query_posts($query_string."&featured=yes"); */
-               rewind_posts();
-            ?>
-            <div class="top-news-preview-wrapper fill">
-            <?php if(have_posts()) : while ( have_posts() ) : the_post(); ?>
-                <div class="top-news-preview stretch tabler" data-id='<?php echo get_the_ID();?>'>
-                    <div class="news-leading">
-                        <div class="news-logo"></div>
-                        <div class="news-info">
-                            <span class="news-title"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></span>
-                            <span class="news-date"><?php the_date(); ?></span>
-                            <span class="news-subtitle"><?php the_title(); ?></span>
+            <?php rewind_posts();?>
+            <div class="post-preview-container">
+            <?php if(have_posts()) : while ( have_posts() ) : the_post();
+                $gallery = get_post_gallery_images($post);
+                ?>
+                <div class="post-preview <?php if (count($gallery)) echo " gallery"; ?>" data-id='<?php echo get_the_ID();?>'>
+                    <div class="post-info">
+                        <div class="logo"></div>
+                        <div class="info">
+                            <span class="title"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></span>
+                            <span class="date"><?php the_date(); ?></span>
+                            <span class="subtitle"><?php the_title(); ?></span>
                         </div>
                     </div>
 
-                    <div class="top-news-preview-second">
-                        <div class="news-text">
-                            <?php the_content(200, "Read more"); ?>
-                        </div>
-                        <div class="news-social">
-                        </div>
+                     <div class="text">
+                        <?php the_content("Read more..."); ?>
+                         <div class="social">
+                         </div>
                     </div>
-                    <div class="top-new-preview-images">
+                    <div class="post-images">
                         <!--TODO insert post images-->
+                        <?php
+                        $image_list = '';
+                        // Loop through each image in each gallery
+                        foreach ($gallery as $image) {
+                            $image_list .= "<img src=" . $image . ">";
+                        }
+                        echo $image_list;
+                        ?>
                     </div>
+
+
                 </div>
             <?php endwhile; ?>
             <?php endif; ?>
@@ -148,55 +130,39 @@ get_header(); ?>
 
     <!-- POSTS -------------------------------------------------------------------------------------------------------->
 
-    <div class="signal-posts">
-        <!--                <div class="signal-posts-layer">-->
-        <div class="signal-posts-header">
-            <div class="signal-posts-logo">
+    <div class="page posts">
+        <div class="page-content">
+            <div class="header">
+                <div class="title"><img src="<?php echo get_template_directory_uri(); ?>/images_design/single/post-title.png">
+                    <span>Posts</span>
+                    <a class="title link" href="">More...</a>
+                </div>
 
             </div>
-            <div class="signal-posts-title">
-                Posts
-            </div>
-            <div class="signal-posts-more">
-                More ...
+            <div class="posts-listing">
+                <?php
+                wp_reset_postdata();
+                global $post;
+                $args = array( 'numberposts' => '4' );
+                $recent_posts = wp_get_recent_posts( $args );
+                $i = 0;
+                foreach( $recent_posts as $post ) : setup_postdata($post); ?>
+                    <?php $shape = get_post_meta( $post["ID"], 'post-form'); ?>
+                    <div class="post <?php echo $shape[0] ?>" >
+                        <div class="post-image">
+                            <?php echo get_the_post_thumbnail($post["ID"], 'full'); ?>
+                        </div>
+                        <div class="title">
+                            <a href="<?php echo get_permalink($post["ID"]);?>"><span><?php echo $post['post_title']; ?></span></a>
+                            <div class="excerpt">
+                                <span><?php echo $post['post_excerpt']; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; wp_reset_postdata(); ?>
+
             </div>
         </div>
-
-    <div class="signal-posts-listing">
-        <?php
-        wp_reset_postdata();
-        global $post;
-        $args = array( 'numberposts' => '4' );
-        $recent_posts = wp_get_recent_posts( $args );
-        $i = 0;
-        foreach( $recent_posts as $post ) : setup_postdata($post); ?>
-            <?php $shape = get_post_meta( $post["ID"], 'oblik_clanka'); ?>
-            <div class="<?php echo $shape[0] ?>" >
-                <div class="<?php $shape[0] ?>-image">
-                    <?php echo get_the_post_thumbnail($post["ID"], 'full'); ?>
-                </div>
-                <div class="<?php echo $shape[0] ?>-title">
-                    <?php if ($shape[0] == 'vertikalni-pravougaonik'){?>
-                    <div class="margintop">
-                        <?php } ?>
-                        <?php echo $post['post_title']; ?>
-                        <div class="<?php echo $shape[0] ?>-excerpt">
-                            <?php echo $post['post_excerpt']; ?>
-                        </div>
-                        <?php if ($shape[0] == 'vertikalni-pravougaonik'){ ?>
-                    </div>
-                <?php } ?>
-                </div>
-            </div>
-            <?php
-            $i++;
-            if ($i == 2) {
-                ?>
-                <div class="clearfix"></div>
-            <?php } ?>
-        <?php endforeach; wp_reset_postdata(); ?>
-
-        <!-- </div>-->
     </div>
 
     <!--<div style="height: 130%;"></div>-->

@@ -1,4 +1,5 @@
 // custom script for signal.rs
+
 $(document).ready(function () {
 
     Signal.init();
@@ -39,7 +40,7 @@ var Signal = {
         };
     },
     headerPositioning: function () {
-        var header = $('.site-header'),
+        var header = $('.menu-main'),
             headerHeight = header.height(),
             animationEnabled = this.settings.enableAnimations.headerPopup,
             $window = $(window),
@@ -74,16 +75,16 @@ var Signal = {
         var self = this,
             animationEnabled = self.settings.enableAnimations.searchForm,
             docEl = $(document),
-            searchForm = $('.signal-search'),
-            navigationBottom = $('.signal-bottom-nav'),
-            searchToggleButton = $('.signal-nav-search'),
+            searchForm = $('.search-form'),
+            navigationBottom = $('.menu-bottom-wrapper'),
+            searchToggleButton = $('.nav-search'),
             searchToggleListItem = searchToggleButton.parent();
 
         var showSearchForm = function (e) {
             e.stopPropagation();
             searchForm.show();
-            var diff = 100;//searchForm.height() -  docEl.scrollTop();
-            //if document is scrolled less than 100px move bottom navigation to see whole search form
+            var diff = 80;//searchForm.height() -  docEl.scrollTop();
+            //if document is scrolled less than 80px move bottom navigation to see whole search form
             if (diff > 0) {
                 navigationBottom.signalAnimate({
                     bottom: diff
@@ -122,13 +123,14 @@ var Signal = {
 
         searchForm.find('.search-cancel').on('click', function () {
             hideSearchForm();
+            searchForm.find('.search-field').val('');
         });
     },
     topNewsLink: function () {
 
         var self = this,
             animationEnabled = self.settings.enableAnimations.topNewsPage;
-        $('.signal-nav-top-news').on('click', function () {
+        $('.nav-news').on('click', function () {
             self.elements.htmlBody.signalAnimate({
                 scrollTop: self.elements.window.height()
             }, animationEnabled, true);
@@ -136,8 +138,8 @@ var Signal = {
     },
     topNewsPosts: function () {
 
-        var posts = $('.top-news-single'),
-            previews = $('.top-news-preview'),
+        var posts = $('.news .post-image'),
+            previews = $('.news .post-preview'),
             animationEnabled = this.settings.enableAnimations.topNewsPosts;
 
         var openPost = function (postId) {
