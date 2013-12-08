@@ -55,23 +55,6 @@ ol, ul {
     margin: 0;
     padding: 0;
 }
-/*
-
-.menu-main {
-    display: none;
-}
-.menu-bottom-wrapper {
-    display: none;
-}
-.page.stream {
-    display: none;
-}
-
-.page.news {
-    display: none;
-}
-*/
-
 
 /* SITE ***************************************************************************************************************/
 
@@ -96,7 +79,7 @@ ol, ul {
 }
 
 .menu-content {
-    width: 1120px;
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -164,7 +147,7 @@ ol, ul {
 
 .menu-main .menu-content > .menu:first-child {
     float: left;
-    width: 380px;
+    width: 460px;
 }
 
 .menu-main .menu-content > .menu:last-child {
@@ -242,6 +225,10 @@ ol, ul {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.menu-bottom-wrapper .page-content {
+    padding-right: 80px;
 }
 
 .menu-bottom {
@@ -595,6 +582,7 @@ ol, ul {
     padding: 0 10px;
     text-transform: uppercase;
     font-weight: bold;
+    line-height: 1;
 }
 
 .news .post-image .title {
@@ -758,6 +746,7 @@ ol, ul {
     font-weight: bold;
     padding: 20px;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .posts .post .title a {
@@ -771,7 +760,7 @@ ol, ul {
 }
 
 .posts .post .title .excerpt {
-   font-size: 22px;
+   font-size: 20px;
     font-weight: normal;
 }
 
