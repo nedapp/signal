@@ -33,6 +33,10 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.1.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/signal.js"></script>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom.css" type='text/css' media='all'/>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/player.css" type='text/css' media='all'/>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css" type='text/css' media='all'/>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/footer.css" type='text/css' media='all'/>
+	<script type="text/javascript">
+		window.homeUrl = '<?php echo home_url(); ?>';
+	</script>
 </head>

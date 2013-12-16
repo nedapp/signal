@@ -7,6 +7,7 @@ $(document).ready(function () {
     Signal.searchForm();
     Signal.topNewsLink();
     Signal.topNewsPosts();
+    Signal.player();
 
 });
 
@@ -183,5 +184,47 @@ var Signal = {
             }
 
         });
+    },
+    player: function () {
+
+        //on regular page, not player page
+        $('.signal-stream-popups, .signal-icon-popups').on('click', function () {
+            var options = {
+                width: 420,
+                height: 650,
+                directories: 0,
+                location: 0,
+                menubar: 0,
+                scrollbars: 1,
+                resizable: 1,
+                status: 0,
+                toolbar: 0,
+                top: 0,
+                left: 0,
+                screenx: 0,
+                screeny: 0
+            };
+
+            var optionsBrowser = $.map(options, function (value, key) {
+                return key + '=' + value;
+            });
+
+            var playerWindow = window.open(homeUrl + '/player', '_blank', optionsBrowser.join(','));
+        });
+
+        var $feeds = $('.player .feeds');
+
+        $('.header .icon-comments').on('click', function () {
+            var height = window.outerHeight,
+                widthMargin = window.outerWidth - window.innerWidth;
+            if (window.innerWidth > 500) {
+                $feeds.hide();
+                window.resizeTo(420 + widthMargin, height);
+            } else {
+                window.resizeTo(840 + widthMargin, height);
+                $feeds.show();
+            }
+        });
     }
+
 }
