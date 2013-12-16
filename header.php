@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css" type='text/css' media='all'/>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/footer.css" type='text/css' media='all'/>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/novecento.css" type='text/css' media='all'/>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/live-radio.css" type='text/css' media='all'/>
 </head>
 
 <body <?php body_class(); ?>>

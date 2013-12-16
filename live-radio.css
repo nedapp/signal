@@ -1,0 +1,210 @@
+.padding-left20 {
+	padding-left: 20px;
+}
+
+.radio-show-leading-image {
+	padding-top: 80px;
+	height: 410px;
+	width: 100%;
+	background-color: navy;
+	position: relative;
+}
+
+.radio-show-basic {
+	color: #ed145a;
+	bottom: 40px;
+	left: 65px;
+	text-transform: uppercase;
+	position: absolute;
+}
+
+.radio-show-timetable {
+	font-size: 24px;
+	background-image: url('images_design/live-radio/timetable.png');
+	background-size: 15px;
+	background-repeat: no-repeat;
+	line-height: 15px;
+}
+
+.radio-show-name {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.live-radio-intro {
+	height: 850px;
+	background-image: url(images_design/top_news/back-pattern-clean.png);
+	position: relative;
+	z-index: 1;
+}
+
+.live-radio-intro:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    background-image: linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 75%, #00b1b3 25%);
+    opacity: 0.85;
+    z-index: -1;
+    height: 850px;
+}
+
+.live-radio-intro-title {
+	font-size: 24px;	
+	margin-left: 65px;
+	float: left;
+}
+
+.live-radio-post-icon {
+	background-image: url('images_design/live-radio/time-icon.png');
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-top: 55px;
+}
+
+.live-radio-current-date {
+	font-size: 35px;
+	color: white;
+	line-height: 20px;
+	margin-top: 60px;	
+	margin-left: 15px;
+	height: 100%;
+}
+
+.radio-shows {
+	padding-top: 100px;
+	margin: 0 auto;
+	width: 900px;
+	position: relative;
+}
+
+.live-radio-current-show-date {
+	width: 288px;
+	height: 288px;
+	background-color: #ed145a;
+	margin-top: 30px;
+	padding: 30px 0 30px 30px;
+	float: left;
+}
+
+.live-radio-current-date {
+	font-size: 35px;
+	color: white;
+	line-height: 20px;
+	margin-top: 60px;	
+	margin-left: 15px;
+	height: 100%;
+}
+
+.day-name {
+	font-size: 50px;
+	color: white;
+	line-height: 45px;
+	text-transform: uppercase;
+	float: left;
+}
+
+.current-day {
+	font-size: 30px;
+	color: white;
+	line-height: 20px;
+}
+
+.current-time {
+	font-size: 60px;
+	color: white;
+	line-height: 60px;
+}
+
+.prev {
+	background-image: url(images_design/live-radio/prev.png);
+	background-repeat: no-repeat;
+	width: 31px;
+	height: 31px;
+	float: right;
+	margin-top: 80px;
+	margin-right: 10px;
+}
+
+.next {
+	background-image: url(images_design/live-radio/next.png);
+	background-repeat: no-repeat;
+	width: 31px;
+	height: 31px;
+	float: right;
+	margin-right: 10px;
+}
+
+.live-radio-show {
+	width: 596px;
+	height: 288px;
+	background-color: #ed145a;
+	margin-left: 15px;
+	margin-top: 30px;
+	float: left;
+}
+
+.info {
+	width: 50%;
+}
+
+.show-title {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 30px;
+	padding: 15px;
+	height: 190px;
+}
+
+.show-start {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0px 0 10px 15px;
+}
+
+.show-start-time {
+	background-image: url(images_design/live-radio/start-tim.png);
+	background-repeat: no-repeat;
+	height: 13px;
+	width: 13px;
+	padding-right: 20px;
+	float: left;
+	margin-top: 3px;
+}
+
+.on-air {
+	background-color: #00b1b3;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 15px;
+	font-size: 30px;
+	color: #ed145a;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.live-radio-next-show {
+	width: 288px;
+	height: 288px;
+	background-color: #ed145a;
+	margin-left: 15px;
+	margin-bottom: 30px;
+	margin-top: 15px;
+	padding: 30px;
+	float: left;
+}
+
+.live-radio-next-show.first {
+	margin-left: 305px;
+}
+
+
