@@ -43,7 +43,8 @@ get_header(); ?>
 			<div class="recent-posts">
 				<div class="recent-posts-block">
 					<?php 
-						$args = array ('exclude' => $wp_query->post->ID);
+						$args = array ('exclude' => $wp_query->post->ID,
+										'category' => 13);
 						$recent_posts = wp_get_recent_posts( $args);
 
 						foreach( $recent_posts  as $post ) : setup_postdata($post); 
