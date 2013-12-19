@@ -32,10 +32,29 @@ get_header("head"); ?>
 		<div class="content feeds">
 			<div class="header">
 				<span class="chat">Caskajte</span>
-				<div class="icon icon-twitter"></div>
-				<div class="icon icon-facebook"></div>
+				<div class="icon twitter active"></div>
+				<div class="icon facebook"></div>
+			</div>
+			<div class="feeds-container twitter">
+				<a class="twitter-timeline"  href="https://twitter.com/RadioSignal"  data-widget-id="413767629279465473">Tweets by @RadioSignal</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+			<div class="feeds-container facebook">
+				<div class="fb-comments" data-href="http://example.com/comments" data-width="400px" data-numposts="3" data-colorscheme="light" mobile="false"></div>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=159602787400180";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+				</script>
 			</div>
 			<div class="banner"></div>
 		</div>
 	</div>
+	<!-- FACEBOOK -->
+
+
 </body>

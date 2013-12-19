@@ -50,8 +50,12 @@
     background-image: url("images_design/nav/user.png");
 }
 
+.player .header .icon-comments.active {
+    background-image: url("images_design/nav/comments.png");
+}
+
 .player .feeds {
-    /*display: none;*/
+    display: none;
 }
 
 .player .feeds .header {
@@ -159,14 +163,22 @@
 }
 
 /* right panel */
-.player .header .icon-facebook {
+.player .header .icon.facebook {
     background-image: url("images_design/nav/facebook.png");
     float: right;
 }
 
-.player .header .icon-twitter {
+.player .header .icon.facebook.active {
+    background-image: url("images_design/nav/facebook-active.png");
+}
+
+.player .header .icon.twitter {
     background-image: url("images_design/nav/twitter.png");
     float: right;
+}
+
+.player .header .icon.twitter.active {
+    background-image: url("images_design/nav/twitter-active.png");
 }
 
 .player .header .chat {
@@ -174,4 +186,29 @@
     font-size: 24px;
     padding: 22px 0 0 20px;
     text-transform: uppercase;
+}
+
+.player .feeds-container {
+    position: relative;
+    width: 420px;
+    height: 470px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.player .feeds-container.facebook {
+    display: none;
+}
+
+/* facebook */
+.fb-comments,
+.fb-comments span,
+.fb-comments iframe {
+    width: 100% !important;
+}
+
+/* twitter */
+.feeds-container.twitter iframe {
+    height: 456px !important;
 }

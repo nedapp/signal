@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     Signal.init();
-    //Signal.headerPositioning();
+    Signal.headerPositioning();
     Signal.searchForm();
     Signal.topNewsLink();
     Signal.topNewsPosts();
@@ -187,8 +187,8 @@ var Signal = {
     },
     player: function () {
 
-        //on regular page, not player page
-        $('.signal-stream-popups, .signal-icon-popups').on('click', function () {
+        //on regular page, not player page, test
+        $('.brand, .icon-popups .audio').on('click', function () {
             var options = {
                 width: 420,
                 height: 650,
@@ -219,12 +219,34 @@ var Signal = {
                 widthMargin = window.outerWidth - window.innerWidth;
             if (window.innerWidth > 500) {
                 $feeds.hide();
+                $(this).removeClass('active');
                 window.resizeTo(420 + widthMargin, height);
             } else {
                 window.resizeTo(840 + widthMargin, height);
                 $feeds.show();
+                $(this).addClass('active');
             }
         });
+
+        var $socialIcons = $feeds.find('.header .icon'),
+            $feedsContainers = $feeds.find('.feeds-container'),
+            activeFeeds = '.twitter';
+
+        $socialIcons.on('click', function () {
+            if ($(this).hasClass('twitter')) {
+                activeFeeds = '.twitter'
+            } else {
+                activeFeeds = '.facebook';
+            }
+
+            if (!$socialIcons.filter(activeFeeds).hasClass('active')) {
+                $feedsContainers.hide();
+                $feedsContainers.filter(activeFeeds).show();
+                $socialIcons.removeClass('active');
+                $socialIcons.filter(activeFeeds).addClass('active');
+            }
+        });
+
     }
 
 }
