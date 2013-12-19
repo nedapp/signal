@@ -20,7 +20,7 @@ get_header(); ?>
 global $wpdb;
 date_default_timezone_set('Europe/Belgrade');
 $current_hour = date('G');
-$meta = $wpdb->get_results("SELECT wp_posts.*
+$currentShow = $wpdb->get_results("SELECT wp_posts.*
 							FROM wp_posts 
 							JOIN wp_postmeta as start_date
 							ON 
@@ -32,14 +32,27 @@ $meta = $wpdb->get_results("SELECT wp_posts.*
 							AND end_date.meta_value > " . $current_hour . "
 							AND wp_posts.post_status = 'publish'
 							");
+
+var_dump($currentShow);
+$pocetak_emisije = get_post_meta( $currentShow[0]->ID, 'pocetak_emisije');
+$zavrsetak_emisije = get_post_meta( $currentShow[0]->ID, 'zavrsetak_emisije');
+$dani = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'];
+
 ?>
 
 <div>
 	<div class="radio-show-leading-image">
+		<?php 
+		
+		$post_object = get_post($currentShow[0]->ID);
+		$post = $post_object;   
+   		setup_postdata( $post );
+
+   		?>
 		<?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image', NULL, 'full'); endif; ?>
 		<div class="radio-show-basic">
-			<div class="radio-show-timetable"> <span class="padding-left20"> 12:00 - 15:00 </span> </div>
-			<div class="radio-show-name"> tvoje radno vreme </div>
+			<div class="radio-show-timetable"> <span class="padding-left20"> <?php echo($pocetak_emisije[0]) . ".00" ?> - <?php echo $zavrsetak_emisije[0]  . ".00"?> </span> </div>
+			<div class="radio-show-name"> <?php echo($currentShow[0]->post_title) ?></div>
 		</div>
 	</div>
 
@@ -54,14 +67,19 @@ $meta = $wpdb->get_results("SELECT wp_posts.*
 		<div class="radio-shows">
 			<div class="live-radio-current-show-date">
 				<div class="day-name">
-					sreda
+					<?php 
+						$index = date('w', time()); 
+						echo ($dani[$index]);
+					?>
 				</div>
 				<div class="next"></div>
 				<div class="current-day">
-					15.dec.2013
+					<?php echo $date = date('d.m.Y', time()); ?>
 				</div>
 				<div class="current-time">
-					13:45
+					<?php 
+						echo $date = date('H:i', time());
+					?>
 				</div>
 				<div class="prev"></div>
 			</div>
