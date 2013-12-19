@@ -18,6 +18,16 @@
     <img class="signal-timeline-icon" src="<?php /*echo get_template_directory_uri(); */?>/images_design/nav/timeline.png"/>
 </div>-->
 			</div>
+			<div class="icons">
+				<div class="brand">
+					<div class="signal-logo">
+						<img class="signal-logo-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/logo.png"/>
+					</div>
+					<div class="signal-logo-text">
+						Radio <br> signal
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="menu">

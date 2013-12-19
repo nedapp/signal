@@ -159,6 +159,15 @@ ol, ul {
     float: left;
 }
 
+.menu-main .icons {
+    margin-left: 80px;
+    position: absolute;
+}
+
+.menu-main.bottom .icons {
+
+}
+
 @keyframes menu-top-anim {
     from {
         top: -80px
@@ -363,13 +372,19 @@ ol, ul {
     background-repeat: no-repeat;
 }
 
-.signal-stream-popups {
-    top: 80px;
+.brand {
+    margin-top: 80px;
     background-color: #ed145a;
-    position: relative;
+    position: absolute;
     width: 380px;
     height: 120px;
     cursor: pointer;
+}
+
+.menu-main.bottom .brand,
+.menu-main.bottom-animated .brand {
+    bottom: 0;
+    margin-top: 0;
 }
 
 .signal-logo {
@@ -395,20 +410,19 @@ ol, ul {
     text-transform: uppercase;
 }
 
-.signal-icon-popups {
-    margin-top: 100px;
+.icon-popups {
+    margin-top: 220px;
+    text-align: left;
     float: left;
-    width: 80px;
+    width: 380px;
+    position: absolute;
+}
+
+.icon-popups img {
     cursor: pointer;
-}
-
-.signal-icon-popups.audio {
-    margin-left: 30px;
-}
-
-.signal-icon-popups-img {
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
 }
 
 .signal-stream-live {
@@ -793,4 +807,30 @@ ol, ul {
 .posts .rectangle-horizontal .post-image {
     margin-left: 360px;
     width: 380px;
+}
+
+/* TEMP */
+
+@keyframes pulse {
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+
+@-webkit-keyframes pulse {
+    25% {
+        -webkit-transform: scale(1.05);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+.icon-popups .audio {
+    animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
 }

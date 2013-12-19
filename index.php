@@ -20,23 +20,10 @@ get_header(); ?>
 
     <div class="page stream">
         <div class="page-content">
-            <div class="signal-stream-popups">
-                <div class="signal-logo">
-                    <img class="signal-logo-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/logo.png"/>
-                </div>
-                <div class="signal-logo-text">
-                    Radio <br> signal
-                </div>
-            </div>
-
-            <div class="signal-icon-popups video">
-                <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/video.png"/>
-            </div>
-
-            <div class="signal-icon-popups audio">
-                <img class="signal-icon-popups-img" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/audio.png"/>
-            </div>
-
+			<div class="icon-popups">
+				<img class="video" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/video.png"/>
+				<img class="audio" src="<?php echo get_template_directory_uri(); ?>/images_design/nav/audio.png"/>
+			</div>
             <div class="signal-stream-live">
                 <div class="signal-stream-artist">
                     Rihanna
