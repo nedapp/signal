@@ -4,19 +4,8 @@
 			<div class="artist">
 				<img src="<?php echo get_template_directory_uri(); ?>/images_design/nav/rihanna.jpg"/>
 			</div>
-			<div class="player">
-				<!--<div class="signal-audio-info">
-                        <span class="signal-current-time"><?php /*date_default_timezone_set("Europe/Belgrade"); echo date("H:i"); */?></span>
-<div class="signal-audio-player-artist">Rihanna</div>
-<div class="signal-audio-player-song"> - Pour it up </div>
-<span class="clearfix"></span>
-<div class="signal-audio-player-hostname">Vladimir Vucinic</div>
-<div class="signal-audio-player-on-air">On air</div>
-</div>
-
-<div class="signal-timeline">
-    <img class="signal-timeline-icon" src="<?php /*echo get_template_directory_uri(); */?>/images_design/nav/timeline.png"/>
-</div>-->
+			<div class="player-wrapper">
+				<?php include('player-inline.php'); ?>
 			</div>
 			<div class="icons">
 				<div class="brand">

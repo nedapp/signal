@@ -7,6 +7,7 @@ $(document).ready(function () {
     Signal.searchForm();
     Signal.topNewsLink();
     Signal.topNewsPosts();
+    Signal.playerInline();
     Signal.player();
 
 });
@@ -185,9 +186,13 @@ var Signal = {
 
         });
     },
-    player: function () {
+    playerInline: function () {
 
-        //on regular page, not player page, test
+        var $timeline = $('.timeline-popup');
+        $('.icon-timeline').on('click', function () {
+           $timeline.toggle('slow');
+        });
+
         $('.brand, .icon-popups .audio').on('click', function () {
             var options = {
                 width: 420,
@@ -212,18 +217,22 @@ var Signal = {
             var playerWindow = window.open(homeUrl + '/player', '_blank', optionsBrowser.join(','));
         });
 
-        var $feeds = $('.player .feeds');
+    },
+    player: function () {
+
+        var $player = $('.player'),
+            $feeds = $('.player .feeds');
 
         $('.header .icon-comments').on('click', function () {
             var height = window.outerHeight,
                 widthMargin = window.outerWidth - window.innerWidth;
             if (window.innerWidth > 500) {
-                $feeds.hide();
                 $(this).removeClass('active');
+                $player.removeClass('wide');
                 window.resizeTo(420 + widthMargin, height);
             } else {
                 window.resizeTo(840 + widthMargin, height);
-                $feeds.show();
+                $player.addClass('wide');
                 $(this).addClass('active');
             }
         });

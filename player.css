@@ -126,21 +126,29 @@
 
 .player .program .status {
     font-size: 12px;
+    left: 50px;
+    margin-top: 5px;
+    position: absolute;
 }
 
 .player .program .show {
-    display: inline-block;
     float: left;
     height: 32px;
     text-transform: none;
     width: 320px;
+    margin-top: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: helveticaneuece;
 }
+
 .player .program .show .speaker {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .player .program .show .name {
-    font-size: 14px;
+    font-size: 15px;
     text-transform: none;
 }
 
@@ -212,3 +220,107 @@
 .feeds-container.twitter iframe {
     height: 456px !important;
 }
+
+/* player inline */
+.player.inline .icon-timeline {
+    background-image: url("images_design/live-radio/time-icon.png");
+    background-position: 24px center;
+    background-repeat: no-repeat;
+    background-size: 32px auto;
+    float: right;
+    height: 80px;
+    width: 80px;
+}
+
+.player.inline .icon-timeline:hover {
+    cursor: pointer;
+    background-color: #00b1b3;
+;
+}
+
+.player.inline .program {
+    width: 300px;
+    float: left;
+    background-color: transparent;
+}
+
+.player.inline .timeline {
+    width: 80px;
+    float: right;
+}
+
+.player.inline .program .show {
+    width: 250px;
+}
+
+.timeline-popup {
+    background-image: url("images_design/live-radio/timeline.png");
+    padding-top: 26px;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    display: none;
+    font-family: helveticaneuece;
+}
+
+.menu-main.bottom-animated .timeline-popup {
+    background-image: url("images_design/live-radio/timeline-inverted.png");
+    bottom: 65px;
+    padding-top: 0;
+    padding-bottom: 26px;
+    top: auto;
+}
+
+.timeline-popup ul {
+    width: 280px;
+}
+
+.timeline-popup li {
+    height: 75px;
+    padding: 2px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.timeline-popup li.last {
+    background-color: #ed145a;
+    font-weight: normal;
+    padding-top: 24px;
+    font-size: 21px;
+}
+
+.menu-main.bottom-animated .timeline-popup li.last {
+    position: absolute;
+    width: 100%;
+    top: -75px;
+}
+
+.timeline-popup .icon-artist {
+    border-radius: 35px;
+    height: 70px;
+    overflow: hidden;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+
+.timeline-popup .artist,
+.timeline-popup .song {
+    display: block;
+    float: none;
+    text-align: left;
+    height: auto;
+    font-size: 17px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.timeline-popup .artist {
+    font-weight: normal;
+    margin-top: 10px;
+    text-transform: none;
+}
+

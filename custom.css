@@ -159,6 +159,13 @@ ol, ul {
     float: left;
 }
 
+.menu-main .player-wrapper {
+    height: 80px;
+    margin-left: 80px;
+    position: relative;
+    width: 380px;
+}
+
 .menu-main .icons {
     margin-left: 80px;
     position: absolute;
@@ -373,7 +380,6 @@ ol, ul {
 }
 
 .brand {
-    margin-top: 80px;
     background-color: #ed145a;
     position: absolute;
     width: 380px;
@@ -383,7 +389,7 @@ ol, ul {
 
 .menu-main.bottom .brand,
 .menu-main.bottom-animated .brand {
-    bottom: 0;
+    bottom: 80px;
     margin-top: 0;
 }
 
