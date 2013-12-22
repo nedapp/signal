@@ -1,0 +1,55 @@
+
+/* helveticaneuece */
+
+@font-face {
+    font-family: 'helveticaneuece';
+    src: url('helveticaneuece/thin-webfont.eot');
+    src: url('helveticaneuece/thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('helveticaneuece/thin-webfont.woff') format('woff'),
+    url('helveticaneuece/thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneuece';
+    src: url('helveticaneuece/italic-webfont.eot');
+    src: url('helveticaneuece/italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('helveticaneuece/italic-webfont.woff') format('woff'),
+    url('helveticaneuece/italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'helveticaneuece';
+    src: url('helveticaneuece/bold-webfont.eot');
+    src: url('helveticaneuece/bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('helveticaneuece/bold-webfont.woff') format('woff'),
+    url('helveticaneuece/bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* novecentosanswide */
+
+@font-face {
+    font-family: 'novecentosanswide';
+    src: url('novecentosanswide/normal-webfont.eot');
+    src: url('novecentosanswide/normal-webfont.eot?#iefix') format('embedded-opentype'),
+    url('novecentosanswide/normal-webfont.woff') format('woff'),
+    url('novecentosanswide/normal-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'novecentosanswide';
+    src: url('novecentosanswide/bold-webfont.eot');
+    src: url('novecentosanswide/bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('novecentosanswide/bold-webfont.woff') format('woff'),
+    url('novecentosanswide/bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

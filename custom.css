@@ -1,6 +1,6 @@
 
-html, button, input, select, textarea {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+html, body, button, input, select, textarea {
+    font-family: novecentosanswide, Helvetica, sans-serif;
 }
 
 html, body {
@@ -674,6 +674,8 @@ ol, ul {
     overflow: hidden;
     text-align: justify;
     width: 760px;
+    font-family: helveticaneuece;
+    font-size: 17px;
 }
 
 .news .text a {

@@ -77,8 +77,9 @@
 	margin-top: 10px;
 	margin-bottom: 20px;
 	color: white;
-	font-size: 22px;
+	font-size: 21px;
 	line-height: 20px;
+    font-family: helveticaneuece;
 }
 
 .footer-twitter-stream {
@@ -100,8 +101,9 @@
 .twitter-tweet {
 	margin-top: 10px;
 	color: white;
-	font-size: 22px;
+	font-size: 21px;
 	line-height: 20px;
+    font-family: helveticaneuece;
 }
 
 .footer-menu-class {
