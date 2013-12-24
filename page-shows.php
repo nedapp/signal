@@ -36,23 +36,22 @@ $currentShow = $wpdb->get_results("SELECT wp_posts.*
 //var_dump($currentShow);
 $pocetak_emisije = get_post_meta( $currentShow[0]->ID, 'pocetak_emisije');
 $zavrsetak_emisije = get_post_meta( $currentShow[0]->ID, 'zavrsetak_emisije');
-$dani = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'];
 
-$nextShows = $wpdb->get_results("SELECT wp_posts.* 
-								 FROM wp_posts
-								 JOIN wp_postmeta start_date
-								 ON 
-								 (wp_posts.id = start_date.post_id AND start_date.meta_key = 'pocetak_emisije')
-								 AND 
-								 start_date.meta_value >= " . $zavrsetak_emisije[0] . "
-								 AND wp_posts.post_status = 'publish'");
 
-// pocetak i kraj dve naredne emisije
-$pocetak_sl_emisije_1 = get_post_meta( $nextShows[0]->ID, 'pocetak_emisije');
-$zavrsetak_sl_emisije_1 = get_post_meta( $nextShows[0]->ID, 'zavrsetak_emisije');
+$allShows = $wpdb->get_results("SELECT wp_posts.*
+							FROM wp_posts 
+							JOIN wp_postmeta as day_meta
+							ON 
+							(wp_posts.ID = day_meta.post_id AND day_meta.meta_key = 'dan')
+							AND day_meta.meta_value == " . 1 . "
+							AND wp_posts.post_status = 'publish'
+							");
 
-$pocetak_sl_emisije_2 = get_post_meta( $nextShows[1]->ID, 'pocetak_emisije');
-$zavrsetak_sl_emisije_2 = get_post_meta( $nextShows[1]->ID, 'zavrsetak_emisije');
+foreach ($allShows as $key => $value) {
+	$pocetak_emisije = get_post_meta( $currentShow[0]->ID, 'pocetak_emisije');
+	$zavrsetak_emisije = get_post_meta( $currentShow[0]->ID, 'zavrsetak_emisije');
+}
+
 ?>
 
 <div>
@@ -75,29 +74,11 @@ $zavrsetak_sl_emisije_2 = get_post_meta( $nextShows[1]->ID, 'zavrsetak_emisije')
 		<div class="live-radio-intro-title">
 			<div class="live-radio-post-icon"></div> 
 			<div class="live-radio-current-date single-uppercase float-left">
-					<span class="single-bold"><?php echo date('d.'); ?></span>
-					<span><?php echo date('F Y.'); ?></span>
+					<span class="single-bold"> na signalu </span>
+					<span>slusate</span>
 			</div>
 		</div>
 		<div class="radio-shows">
-			<div class="live-radio-current-show-date">
-				<div class="day-name">
-					<?php 
-						$index = date('w', time()); 
-						echo ($dani[$index]);
-					?>
-				</div>
-				<a href="<?php echo get_site_url() . '/shows?day=' . ($index + 1) ?>" ><span class="next"></span></a>
-				<div class="current-day">
-					<?php echo $date = date('d.m.Y', time()); ?>
-				</div>
-				<div class="current-time">
-					<?php 
-						echo $date = date('H:i', time());
-					?>
-				</div>
-				<a href="<?php echo get_site_url() . '/shows?day=' . ($index - 1) ?>" ><span class="prev"></span></a>
-			</div>
 			<div class="live-radio-show">
 				<div class="info">
 					<div class="show-title"> 
@@ -118,35 +99,6 @@ $zavrsetak_sl_emisije_2 = get_post_meta( $nextShows[1]->ID, 'zavrsetak_emisije')
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="live-radio-next-show first">
-				<div class="next-show-image">
-					<?php echo get_the_post_thumbnail($nextShows[0]->ID, array(300, 288)); ?>
-					<div class="next-show-info">
-						<div class="show-start live-timetable"> 
-							<span class="next-show-start-time"></span>
-							<span><?php echo $pocetak_sl_emisije_1[0] . ".00 - " .  $zavrsetak_sl_emisije_1[0] . ".00" ?></span>
-						</div>
-						<div class="next-show-title">
-							<?php echo $nextShows[0]->post_title; ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="live-radio-next-show">
-				<div class="next-show-image">
-					<?php echo get_the_post_thumbnail($nextShows[1]->ID, array(300, 288)); ?>
-					<div class="next-show-info">
-						<div class="show-start live-timetable"> 
-							<span class="next-show-start-time"></span>
-							<span><?php echo $pocetak_sl_emisije_2[0] . ".00 - " .  $zavrsetak_sl_emisije_2[0] . ".00" ?></span>
-						</div>
-						<div class="next-show-title">
-							<?php echo $nextShows[1]->post_title; ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 
 
